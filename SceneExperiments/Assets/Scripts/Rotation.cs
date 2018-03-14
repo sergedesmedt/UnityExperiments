@@ -9,7 +9,7 @@ public class Rotation : MonoBehaviour {
 
     float _startValue = 0.0f;
     float _endValue = 90.0f;
-    float _distance = 90.0f;
+    float _angle = 90.0f;
 
     static float t = 0.0f;
 
@@ -27,13 +27,14 @@ public class Rotation : MonoBehaviour {
         if (_setExtremes) {
             //_startValue = this.transform.eulerAngles.y;
             _startValue = this.transform.localEulerAngles.y;
-            _endValue = _startValue + _distance;
+            _endValue = _startValue + _angle;
 
             _setExtremes = false;
         }
 
         //this.transform.eulerAngles = new Vector3(this.transform.eulerAngles.x, Mathf.Lerp(_startValue, _endValue, t), this.transform.eulerAngles.z);
         this.transform.localEulerAngles = new Vector3(this.transform.localEulerAngles.x, Mathf.Lerp(_startValue, _endValue, t), this.transform.localEulerAngles.z);
+        //this.transform.RotateAround(transform.position, transform.up, Mathf.Lerp(_startValue, _endValue, t));
 
         t += 0.5f * Time.deltaTime;
         if (t > 1.0f) {
