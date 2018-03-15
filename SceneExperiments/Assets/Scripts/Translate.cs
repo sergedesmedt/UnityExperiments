@@ -25,13 +25,15 @@ public class Translate : MonoBehaviour {
             return; 
 
         if(_setExtremes) {
-            _startValue = this.transform.position.x;
+            //_startValue = this.transform.position.x;
+            _startValue = this.transform.localPosition.x;
             _endValue = _startValue + _distance;
 
             _setExtremes = false;
         }
 
-        this.transform.position = new Vector3(Mathf.Lerp(_startValue, _endValue, t), 0, 0);
+        //this.transform.position = new Vector3(Mathf.Lerp(_startValue, _endValue, t), this.transform.position.y, this.transform.position.z);
+        this.transform.localPosition = new Vector3(Mathf.Lerp(_startValue, _endValue, t), this.transform.localPosition.y, this.transform.localPosition.z);
 
         t += 0.5f * Time.deltaTime;
         if (t > 1.0f) {
