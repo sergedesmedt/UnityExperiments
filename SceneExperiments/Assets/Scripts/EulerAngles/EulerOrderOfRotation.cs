@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // https://en.wikipedia.org/wiki/Euler_angles
+// https://en.wikipedia.org/wiki/Euler_angles#Tait–Bryan_angles
 public class EulerOrderOfRotation : MonoBehaviour {
 
     float _startX = 0.0f;
@@ -16,7 +17,7 @@ public class EulerOrderOfRotation : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        // From the UNity documentation
+        // From the Unity documentation
         // The x, y, and z angles represent a rotation 
         //      z degrees around the z axis, 
         //      x degrees around the x axis, and 
@@ -27,7 +28,7 @@ public class EulerOrderOfRotation : MonoBehaviour {
 
         // think what this should give when we first rotate around the Y axis and then around the Z axis
         // now, look at what we got: this clearly firts rotated around the Z axis and then around the Y axis
-        this.transform.localEulerAngles = new Vector3(0, 30, 45);
+        this.transform.localEulerAngles = new Vector3(10, 30, 45);
 
     }
 
