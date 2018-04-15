@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // https://en.wikipedia.org/wiki/Euler_angles
-// https://en.wikipedia.org/wiki/Euler_angles#Tait–Bryan_angles
+// https://en.wikipedia.org/wiki/Euler_angles#Tait–Bryan_angles > Unity euler angles are actually these
 public class EulerOrderOfRotation : MonoBehaviour {
 
     float _startX = 0.0f;
