@@ -11,7 +11,7 @@ using UnityEngine;
 
 // kunnen we quaternions beter begrijpen via angle-axis rotations ?
 
-public class Quaternion : MonoBehaviour {
+public class QuaternionTests : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {

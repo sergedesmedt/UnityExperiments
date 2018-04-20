@@ -11,6 +11,6 @@ public class DisplayRotation : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Debug.Log("Rotation: " + this.transform.rotation.ToString() + ", EulerAngles" + this.transform.eulerAngles.ToString());
+        //Debug.Log("Rotation: " + this.transform.rotation.ToString() + ", EulerAngles" + this.transform.eulerAngles.ToString());
 	}
 }
